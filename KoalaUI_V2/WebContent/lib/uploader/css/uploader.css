@@ -1,0 +1,156 @@
+.uploader {
+    border: 1px dotted #A5A5C7;
+    padding: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #92AAB0;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.uploader > div {
+    font-size: 1.6em;
+}
+
+.uploader .browser {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.uploader .file-info {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
+
+.uploader .file-name, .uploader .point-title{
+    text-align: center;
+    font-size: .8em!important;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.uploader .error-msg {
+    text-align: center;
+    font-size: .8em!important;
+    color: #f00;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.swfUpload-Container .btn {
+    float: right;
+    border-radius: 5px;
+}
+.swfUpload-Container .btn i {
+    font-size: 1em;
+}
+
+.uploader .progress, .swfUpload-Container .progress {
+    margin-bottom: 5px!important;
+}
+
+
+.file-input {
+    position: relative;
+    height: 38px;
+    line-height: 38px;
+    margin-bottom: 9px;
+    cursor: pointer;
+}
+.file-input .file-label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #d5d5d5;
+    cursor: pointer;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: all .15s;
+    transition: all .15s;
+}
+.file-input .file-label:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #f59942;
+}
+.file-input .file-label:before {
+    display: inline-block;
+    content: attr(data-title);
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0 8px;
+    line-height: 24px;
+    text-align: center;
+    background-color: #6fb3e0;
+    color: #FFF;
+    font-size: 11px;
+    font-weight: bold;
+    border: 2px solid #FFF;
+    border-left-width: 4px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.file-input .file-label .file-name {
+    display: inline-block;
+    height: 28px;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 28px;
+    color: #888;
+    font-size: 13px;
+    vertical-align: top;
+    position: static;
+    padding-left: 10px;
+}
+.file-input .file-label .fa {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    line-height: 24px;
+    width: 26px;
+    text-align: center;
+    font-family: FontAwesome;
+    font-size: 13px;
+    border: 2px solid #FFF;
+    color: #FFF;
+    -webkit-transition: all .1s;
+    transition: all .1s;
+    background-color: #d1d1d1;
+}
+.file-input .file-label .file-name:after {
+    display: inline-block;
+    content: attr(data-title);
+}
+.uploader .dropfile {
+    border: 1px dotted #A5A5C7;
+}
+.uploader .dropfile:hover {
+    border-color: #f59942;
+}
+.browser .fa {
+    position: relative;
+    display: block;
+    text-align: center;
+    height: auto;
+    line-height: 64px;
+    width: auto;
+    font-size: 64px;
+    color: #d5d5d5;
+    margin: 4px 0;
+    background-color: transparent;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>手风琴</title>
+<link href="../../css/bootstrap3.css" rel="stylesheet" media="screen">
+<link href="../../css/font-awesome.css" rel="stylesheet"> 
+<link href="../../css/koala.css" rel="stylesheet" media="screen">
+<script src="../../js/jquery.js" type="text/javascript"></script>
+<script src="../../lib/Koala_Accordion.js" type="text/javascript"></script>
+
+</head>
+<body>
+<div id="accordion" class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a href="#collapseOne" data-parent="#accordion" data-toggle="accordion" class="collapsed">
+          菜单1
+        </a>
+      </h4>
+    </div>
+    <div class="panel-collapse collapse" id="collapseOne" style="height: 0px;">
+      <div class="panel-body">
+        折叠内容1
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a href="#collapseTwo" data-parent="#accordion" data-toggle="accordion" class="collapsed">
+          菜单2
+        </a>
+      </h4>
+    </div>
+    <div class="panel-collapse collapse" id="collapseTwo" style="height: 0px;">
+      <div class="panel-body">
+        折叠内容2
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a href="#collapseThree" data-parent="#accordion" data-toggle="accordion" class="">
+          菜单3
+        </a>
+      </h4>
+    </div>
+    <div class="panel-collapse collapse in" id="collapseThree" style="height: auto;">
+      <div class="panel-body">
+        折叠内容3
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

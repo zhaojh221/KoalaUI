@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>左侧菜单</title>
+        <link href="../../css/bootstrap3.css" rel="stylesheet" media="screen">
+        <link href="../../css/font-awesome.css" rel="stylesheet"> 
+        <link href="../../css/koala.css" rel="stylesheet" media="screen">
+        <script src="../../js/jquery.js" type="text/javascript"></script>
+        <script src="../../lib/Koala_SideBar.js" type="text/javascript"></script>
+        <style>
+            .workspace-container {
+                background-color: #eee;
+                height: 800px;
+                float: right;
+            }
+            .hide-sidebar-icon {
+                width: 9px;
+                background-color: #AAAAAA;
+                height: 100%;
+                padding-top: 340px;
+                color: #fff;
+                cursor:pointer;
+            }
+
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var parent_width = $(".workspace-container").parent().width();
+                var sidebar_width = $(".sidebar").width();
+                $(".workspace-container").width(parent_width - sidebar_width);
+
+                $(".hide-sidebar-icon").click(function() {
+                    //切换sidebar显示或隐藏
+
+                    if ($(".workspace-container").width() < parent_width) {
+                        $(".sidebar").toggle(10, function() {
+                            $(".workspace-container").animate({width: parent_width}, function() {
+                                //变换箭头方向
+                                $(".icon-chevron-left").removeClass("icon-chevron-left").addClass("icon-chevron-right");
+                            });
+                        });
+                    } else {
+                        $(".workspace-container").animate({width: parent_width - sidebar_width}, function() {
+                            //变换箭头方向
+                            $(".icon-chevron-right").removeClass("icon-chevron-right").addClass("icon-chevron-left");
+                            $(".sidebar").toggle();
+                        });
+
+
+                    }
+
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="col-xs-12">
+            <div class="sidebar">
+                <ul data-role="nav">
+                    <li class="has_sub"><a href="#"><i class="icon-edit"></i>基础组件<span class="pull-right"><i class="icon-chevron-right"></i></span></a> 
+                        <!-- Sub menu markup -->
+                        <ul>
+                            <li><a href="javascript:void(0)" load-html="pages/accordion/basic.html">手风琴</a></li>
+                            <li><a href="javascript:void(0)" load-html="checkBox.html">复选框</a></li>
+                            <li><a href="javascript:void(0)" load-html="pages/dropdown/basic.html">下拉菜单</a></li>
+                            <li><a href="javascript:void(0)" load-html="radio.html">单选框</a></li>
+                            <!-- Form表单 -->
+                        </ul> 
+                    </li>
+                    <li class="has_sub"><a href="#"><i class="icon-list-alt"></i>组合框 <span class="pull-right"><i class="icon-chevron-right"></i></span></a>
+                        <ul>
+                            <li><a href="javascript:void(0)" load-html="accordion.html">基本功能</a></li>
+                            <li><a href="javascript:void(0)" load-html="accordion.html">多选支持</a></li>
+                            <li><a href="javascript:void(0)" load-html="accordion.html">异步加载</a></li>
+                            <li><a href="javascript:void(0)" load-html="accordion.html">下拉表格</a></li>
+                        </ul> 
+
+                    </li>
+                    <li class="has_sub"><a href="#"> <i class="icon-list-alt"></i>树形组件 <span class="pull-right"><i class="icon-chevron-right"></i></span></a>
+                        <ul>
+                            <li><a href="javascript:void(0)" load-html="accordion.html">基本功能</a></li>
+                            <li><a href="javascript:void(0)" load-html="accordion.html">带复选框</a></li>
+                            <li><a href="javascript:void(0)" load-html="accordion.html">异步加载</a></li>
+                            <li><a href="javascript:void(0)" load-html="accordion.html">可拖拽节点</a></li>
+                            <li><a href="javascript:void(0)" load-html="accordion.html">自定义节点图标</a></li>
+                            <li><a href="javascript:void(0)" load-html="accordion.html">可编辑节点</a></li>
+                            <li><a href="javascript:void(0)" load-html="accordion.html">节点事件</a></li>
+                            <li><a href="javascript:void(0)" load-html="accordion.html">节点右键菜单</a></li>
+                        </ul> 
+                    </li>
+                </ul>
+
+            </div>
+            <div class="workspace-container">
+                <div class="hide-sidebar-icon">
+                    <div class="icon-chevron-left"></div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

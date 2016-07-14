@@ -1,0 +1,111 @@
+var data = {
+	"Tree-树形组件":{
+		properties:[
+            {"property":"multiSelect","description":"是否允许多选","value":"Boolean","default":"false"},
+	        {"property":"loadingHTML","description":"载入时显示的html","value":"html字符串","default":""}
+		],methods:[
+            {"method":"render","param":"","description":"渲染树","return":""},
+            {"method":"isEmpty","param":"obj","description":"判断树是否为空","return":"Boolean"},
+            {"method":"createParent","param":"","description":"创建树的父节点","return":""}
+		],events:[
+	        
+		]	
+	},
+	"Button-按钮":{
+		properties:[
+            {"property":"loadingText","description":"正在载入时显示的文字","value":"String","default":"loading..."}
+		],methods:[
+            {"method":"setState","param":"state(String)","description":"设置状态","return":""},
+            {"method":"toggle","param":"","description":"切换按钮的状态","return":""}
+		],events:[
+	        
+		]	
+	},
+	"Carousel-图片轮播":{
+		properties:[
+            {"property":"interval","description":"图片自动切换时间","value":"Integer","default":"5000（毫秒）"},
+            {"property":"pause","description":"暂停轮播操作","value":"String","default":"hover（鼠标停留）"}
+		],methods:[
+            {"method":"getActiveIndex","param":"","description":"获取当前轮播的图片的索引","return":"Integer"},
+            {"method":"to","param":"pos(Integer)","description":"跳到第几幅图片","return":""},
+            {"method":"pause","param":"","description":"暂停播放","return":""},
+            {"method":"cycle","param":"","description":"继续播放","return":""},
+            {"method":"next","param":"","description":"下一张","return":""},
+            {"method":"prev","param":"","description":"上一张","return":""},
+		],events:[
+	        
+		]	
+	},
+	"ComboBox-组合框":{
+		properties:[
+		            
+		],methods:[
+            {"method":"selectedItem","param":"","description":"获得选择的数据","return":"String"},
+            {"method":"selectByText","param":"text(String)","description":"根据文本框选择","return":""},
+            {"method":"selectByValue","param":"value(String)","description":"根据下拉框某个值选择","return":""},
+            {"method":"selectByIndex","param":"index(Integer)","description":"根据下拉框某个索引选择","return":""},
+            {"method":"selectBySelector","param":"selector(String)","description":"根据某个jQuery选择器语法选择","return":""},
+            {"method":"setDefaultSelection","param":"","description":"设置选择默认第一个","return":""},
+            {"method":"enable","param":"","description":"设置组合框的文本和按钮可用","return":""},
+            {"method":"disable","param":"","description":"设置组合框的文本和按钮不可用","return":""},
+		],events:[
+	        {"event":"itemclicked","param":"event","description":"下拉框点击事件"},
+	        {"event":"inputchanged","param":"event,extra","description":"输入文本改变时的事件"},
+		]	
+	},
+	"DateTimePicker-日期时间":{
+		properties:[
+		            
+		],methods:[
+            {"method":"show","param":"event","description":"显示","return":""},
+            {"method":"hide","param":"event","description":"隐藏","return":""},
+            {"method":"enable","param":"","description":"设置组合框的文本和按钮可用","return":""},
+            {"method":"disable","param":"","description":"设置组合框的文本和按钮不可用","return":""},
+            {"method":"setValue","param":"newDate(String)","description":"设置UTC格式的日期","return":""},
+            {"method":"getValue","param":"","description":"获取当前UTC格式日期字符串","return":"String"},
+            {"method":"getDate","param":"","description":"获取当前UTC格式日期","return":"Date"},
+            {"method":"setDate","param":"date(Date)","description":"设置UTC格式的日期","return":""},
+            {"method":"setStartDate","param":"date","description":"设置开始日期","return":""},
+            {"method":"setEndDate","param":"date","description":"设置结束日期","return":""},
+            {"method":"getLocalDate","param":"event","description":"获取当前本地格式日期","return":"Date"},
+            {"method":"setLocalDate","param":"localDate(Date)","description":"设置本地格式日期","return":""},
+		],events:[
+	        
+		]	
+	},
+	"Grid-数据表格":{
+		properties:[
+			{"property":"loadingText","description":"数据载入时的提示文字","value":"String","default":"正在载入..."},
+			{"property":"noDataText","description":"没有数据时的提示文字","value":"String","default":"没有数据"},
+			{"property":"isShowIndexCol","description":"是否显示索引列","value":"Boolean","default":"true"},
+			{"property":"isShowButtons","description":"是否显示功能按钮","value":"Boolean","default":"true"},
+			{"property":"autoLoad","description":"是否表格准备好时加载数据","value":"Boolean","default":"true"},
+			{"property":"isShowPages","description":"是否显示分页","value":"Boolean","default":"true"},  
+			{"property":"isUserLocalData","description":"是否使用本地数据源","value":"Boolean","default":"false"},
+			{"property":"method","description":"请求提交方法","value":"String","default":"POST"},
+			{"property":"identity","description":"主键列名","value":"String","default":"id"},
+			{"property":"lockWidth","description":"是否锁定宽度","value":"Boolean","default":"false"},
+			{"property":"pageSize","description":"每页显示行数","value":"Integer","default":"10"},
+			{"property":"pageNo","description":"当前第几页","value":"Integer","default":"1"},
+			{"property":"showPage","description":"分页栏显示多少页","value":"Integer","default":"4"},
+		],methods:[
+            {"method":"selectedRows","param":"","description":"获得已选择的行数组","return":"Array"},
+            {"method":"selectedRowsNo","param":"","description":"获得已选择的行序列数组","return":"Array"},
+            {"method":"getAllItems","param":"","description":"获取所有行","return":"Array"},
+            {"method":"selectedRowsIndex","param":"","description":"返回选择行索引的数组","return":"Array"},
+            {"method":"insertRows","param":"items(Array)","description":"新增一行记录","return":""},
+            {"method":"removeRows","param":"","indexs(Array)":"移除一行或多行","return":""},
+            {"method":"updateRows","param":"currentKeyId, item","description":"更新某一行数据","return":""},
+            {"method":"getIndexByIdentityValue","param":"value(String)","description":"根据ID查找当前行索引","return":"Integer"},
+            {"method":"getRowByIndex","param":"index(Integer)","description":"根据行索引返回行","return":"DOM"},
+            {"method":"getItemByIndex","param":"index(Ingeter)","description":"根据行索引放回行数据","return":"Object"},
+            {"method":"refresh","param":"","description":"刷新表格","return":""},
+            {"method":"destory","param":"","description":"清空表格","return":""},
+            {"method":"search","param":"conditions(Object)","description":"查询操作，表格载入新数据","return":""},
+            {"method":"up","param":"index(Integer)","description":"当前行上移","return":""},
+            {"method":"down","param":"index(Integer)","description":"当前行下移","return":""},
+		],events:[
+	        
+		]	
+	}
+};

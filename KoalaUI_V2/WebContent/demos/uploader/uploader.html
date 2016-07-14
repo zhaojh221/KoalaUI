@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>文件上传</title>
+    <link href="../../css/font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="../../lib/uploader/css/uploader.css" rel="stylesheet"/>
+    <link href='../../css/bootstrap3.min.css' rel="stylesheet" />
+    <style>
+        body {
+            position: relative;
+            margin-top: 10%;
+            margin-left: 35%;
+            margin-right: 35%;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="uploader"></div>
+<script src="../../js/jquery.js"></script>
+<script src="../../lib/uploader/swfUpload/swfupload.js">  </script>
+<script src="../../lib/uploader/uploader.js">  </script>
+<script>
+    $(function(){
+        $('#uploader').uploader({
+            url :  'file/upload',
+            dataType : 'text',
+            button_image_url: '../../lib/uploader/images/uploadButton.jpg',
+            flash_url: '../../lib/uploader/swfUpload/swfupload.swf',
+            onUploadSuccess : function(id, data) {
+                imagePreview.attr('src', contextPath + '/' + data).show();
+                pageContents.find('#imageUrl').val(data);
+            }
+        });
+    });
+</script>
+</body>
+</html>
